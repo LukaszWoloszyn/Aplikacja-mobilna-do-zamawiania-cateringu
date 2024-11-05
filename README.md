@@ -3,15 +3,15 @@ Programowanie urządzeń mobilnych laboratorium L_3_
 # Dokumentacja projetu: Aplikacja mobilna do zamawaiania cateringu
 
 ## Zespoł projetowy:
-_Justyna Toczek
-Łukasz Wołoszyn_
+_Justyna Toczek </br>
+Łukasz Wołoszyn_ </br></br></br>
 
 Projekt na ocenę 5.0
 
-## Opis projektu
+## Opis projektu: </br>
 Aplikacja mobilna do zamawiania cateringu umożliwiająca użytkownikom zamawianie spersonalizowanego jedzenia z dostawą, uwzględniając lokalizację klienta i firmy cateringowej. Aplikacja wyznacza dystans między lokalizacją klienta a najbliższym punktem firmy, co pozwala na obliczanie kosztów dostawy. Użytkownik wybiera punkt firmy z którego dostarczany będzie catering.
 
-## Zakres projektu opis funkcjonalności:
+## Zakres projektu opis funkcjonalności: </br>
 Użytkownik: </br>
 • Rejestracja i logowanie: użytkownicy mogą zarejestrować konto oraz logować się do aplikacji. </br>
 • Zarządzanie kontem: edycja danych osobowych. </br>
