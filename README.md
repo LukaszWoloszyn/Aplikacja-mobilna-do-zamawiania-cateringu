@@ -1,6 +1,6 @@
 Programowanie urządzeń mobilnych laboratorium L_3_ 
 
-# Dokumentacja projetu: ** Aplikacja mobilna do zamawaiania cateringu **
+# Dokumentacja projetu: Aplikacja mobilna do zamawaiania cateringu
 
 ## Zespoł projetowy:
 _Justyna Toczek
@@ -12,19 +12,19 @@ Projekt na ocenę 5.0
 Aplikacja mobilna do zamawiania cateringu umożliwiająca użytkownikom zamawianie spersonalizowanego jedzenia z dostawą, uwzględniając lokalizację klienta i firmy cateringowej. Aplikacja wyznacza dystans między lokalizacją klienta a najbliższym punktem firmy, co pozwala na obliczanie kosztów dostawy. Użytkownik wybiera punkt firmy z którego dostarczany będzie catering.
 
 ## Zakres projektu opis funkcjonalności:
-Użytkownik:
+Użytkownik: </br>
 • Rejestracja i logowanie: użytkownicy mogą zarejestrować konto oraz logować się do aplikacji. </br>
 • Zarządzanie kontem: edycja danych osobowych. </br>
 •	Wybór lokalizacji dostawy: użytkownik może ręcznie wpisać adres dostawy. </br>
-• Wybór odpowiadających godzin i okresu dostaw cateringu: np. użytkownik wybiera godzinę dostawy jako 7:00 przez okres tygodnia.
-• Zarządzanie zamówieniami: edycja wybranej oferty, rezygnacja z niej.
-•	Menu firmy cateringowej: aplikacja wyświetla dostępną ofertę menu i ceny.
-•	Wyznaczenie odległości: aplikacja oblicza dystans pomiędzy miejscem dostawy a lokalizacją punktu firmy cateringowej.
-•	Obliczanie kosztów dostawy: na podstawie odległości aplikacja automatycznie aktualizuje koszty dostawy.
+• Wybór odpowiadających godzin i okresu dostaw cateringu: np. użytkownik wybiera godzinę dostawy jako 7:00 przez okres tygodnia. </br>
+• Zarządzanie zamówieniami: edycja wybranej oferty, rezygnacja z niej. </br>
+•	Menu firmy cateringowej: aplikacja wyświetla dostępną ofertę menu i ceny. </br>
+•	Wyznaczenie odległości: aplikacja oblicza dystans pomiędzy miejscem dostawy a lokalizacją punktu firmy cateringowej. </br>
+•	Obliczanie kosztów dostawy: na podstawie odległości aplikacja automatycznie aktualizuje koszty dostawy. </br> </br>
 
-Administrator:
-• Zarządzanie ofertą: dodawanie, edycja, usuwanie danych.
-• Zarządzanie użytkownikami: edycja i usuwanie danych.
+Administrator: </br>
+• Zarządzanie ofertą: dodawanie, edycja, usuwanie danych. </br>
+• Zarządzanie użytkownikami: edycja i usuwanie danych. </br></br>
 
 ## Panele / zakładki aplikacji 
 - Panel logowania
