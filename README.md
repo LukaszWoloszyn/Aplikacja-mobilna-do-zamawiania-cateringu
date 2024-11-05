@@ -4,7 +4,7 @@ Programowanie urządzeń mobilnych laboratorium L_3_
 
 ## Zespoł projetowy:
 _Justyna Toczek </br>
-Łukasz Wołoszyn_ </br></br></br>
+Łukasz Wołoszyn_ </br></br>
 
 Projekt na ocenę 5.0
 
