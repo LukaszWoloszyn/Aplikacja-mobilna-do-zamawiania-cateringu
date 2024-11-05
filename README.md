@@ -13,9 +13,9 @@ Aplikacja mobilna do zamawiania cateringu umożliwiająca użytkownikom zamawian
 
 ## Zakres projektu opis funkcjonalności:
 Użytkownik:
-• Rejestracja i logowanie: użytkownicy mogą zarejestrować konto oraz logować się do aplikacji.
-• Zarządzanie kontem: edycja danych osobowych.
-•	Wybór lokalizacji dostawy: użytkownik może ręcznie wpisać adres dostawy.
+• Rejestracja i logowanie: użytkownicy mogą zarejestrować konto oraz logować się do aplikacji. </br>
+• Zarządzanie kontem: edycja danych osobowych. </br>
+•	Wybór lokalizacji dostawy: użytkownik może ręcznie wpisać adres dostawy. </br>
 • Wybór odpowiadających godzin i okresu dostaw cateringu: np. użytkownik wybiera godzinę dostawy jako 7:00 przez okres tygodnia.
 • Zarządzanie zamówieniami: edycja wybranej oferty, rezygnacja z niej.
 •	Menu firmy cateringowej: aplikacja wyświetla dostępną ofertę menu i ceny.
