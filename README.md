@@ -1,6 +1,6 @@
 Programowanie urządzeń mobilnych laboratorium L_3_ 
 
-# Dokumentacja projetu: Aplikacja mobilna do zamawaiania cateringu
+# Dokumentacja projetu: Aplikacja mobilna do zamawiania cateringu
 
 ## Zespoł projetowy:
 _Justyna Toczek </br>
