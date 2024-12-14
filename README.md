@@ -35,6 +35,9 @@ Administrator: </br>
 
 ## Baza danych
 ###### Diagram ERD
+![image](https://github.com/user-attachments/assets/a2cc1c4a-8299-4132-bdca-9ecd43e1de7c)
+
+
 
 ###### Opis bazy danych
 
