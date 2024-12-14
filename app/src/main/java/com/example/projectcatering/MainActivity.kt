@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_main)
 
         recyclerView = findViewById(R.id.recyclerView)
@@ -45,56 +46,53 @@ class MainActivity : AppCompatActivity() {
 
         val myButton: Button = findViewById(R.id.myButton)
         myButton.setOnClickListener {
-            // Oczyszczamy listę i odświeżamy dane
-            userList.clear() // Usuwamy poprzednie dane
-            userAdapter.notifyDataSetChanged() // Aktualizujemy RecyclerView
-            fetchUsers() // Pobieramy dane z bazy
-
-            Toast.makeText(this, ":)", Toast.LENGTH_SHORT).show()
+            val intentSA = Intent(applicationContext, HomepageActivity::class.java)
+            startActivity(intentSA)
         }
-
-        fetchUsers() // Pierwsze pobranie danych
-    }
-
-    private fun fetchUsers() {
-        val url = "http://10.0.2.2/get_users.php" // Poprawny adres URL dla emulatora
-
-        val stringRequest = StringRequest(
-            Request.Method.GET, url,
-            Response.Listener { response ->
-                try {
-                    val jsonArray = JSONArray(response)
-                    for (i in 0 until jsonArray.length()) {
-                        val jsonObject = jsonArray.getJSONObject(i)
-                        val user = User(
-                            id = jsonObject.getInt("id"),
-                            nazwa_uzytkownika = jsonObject.getString("nazwa_uzytkownika"),
-                            email = jsonObject.getString("email"),
-                            imie = jsonObject.optString("imie", ""),
-                            nazwisko = jsonObject.optString("nazwisko", ""),
-                            adres_dostawy = jsonObject.optString("adres_dostawy", ""),
-                            telefon = jsonObject.optString("telefon", ""),
-                            rola = jsonObject.getString("rola")
-                        )
-                        userList.add(user)
-                    }
-                    if (::userAdapter.isInitialized) {
-                        userAdapter.notifyDataSetChanged() // Aktualizacja RecyclerView
-                    } else {
-                        userAdapter = UserAdapter(userList)
-                        recyclerView.adapter = userAdapter
-                    }
-                } catch (e: Exception) {
-                    Log.e("Parsing Error", e.message ?: "Unknown error")
-                }
-            },
-            Response.ErrorListener {
-                Log.e("API Error", it.message ?: "Unknown error")
-            }
-        )
-
-        MySingleton.getInstance(this).addToRequestQueue(stringRequest)
     }
 }
+
+//to bylo do przetestowania pobierania danych z bazy
+
+//    private fun fetchUsers() {
+//        val url = "http://10.0.2.2/get_users.php" // Poprawny adres URL dla emulatora
+//
+//        val stringRequest = StringRequest(
+//            Request.Method.GET, url,
+//            Response.Listener { response ->
+//                try {
+//                    val jsonArray = JSONArray(response)
+//                    for (i in 0 until jsonArray.length()) {
+//                        val jsonObject = jsonArray.getJSONObject(i)
+//                        val user = User(
+//                            id = jsonObject.getInt("id"),
+//                            nazwa_uzytkownika = jsonObject.getString("nazwa_uzytkownika"),
+//                            email = jsonObject.getString("email"),
+//                            imie = jsonObject.optString("imie", ""),
+//                            nazwisko = jsonObject.optString("nazwisko", ""),
+//                            adres_dostawy = jsonObject.optString("adres_dostawy", ""),
+//                            telefon = jsonObject.optString("telefon", ""),
+//                            rola = jsonObject.getString("rola")
+//                        )
+//                        userList.add(user)
+//                    }
+//                    if (::userAdapter.isInitialized) {
+//                        userAdapter.notifyDataSetChanged() // Aktualizacja RecyclerView
+//                    } else {
+//                        userAdapter = UserAdapter(userList)
+//                        recyclerView.adapter = userAdapter
+//                    }
+//                } catch (e: Exception) {
+//                    Log.e("Parsing Error", e.message ?: "Unknown error")
+//                }
+//            },
+//            Response.ErrorListener {
+//                Log.e("API Error", it.message ?: "Unknown error")
+//            }
+//        )
+//
+//        MySingleton.getInstance(this).addToRequestQueue(stringRequest)
+//    }
+//}
 
 

@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">ProjectCatering</string>
+    <string name="user_icon">Ikona użytkownika</string>
+    <string name="homepage_title">Wybierz swój wymarzony plan cateringowy</string>
+    <string name="dieta_tradycyjna">Dieta tradycyjna</string>
 </resources>

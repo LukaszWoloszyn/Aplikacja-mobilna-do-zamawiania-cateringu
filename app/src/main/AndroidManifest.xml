@@ -22,9 +22,10 @@
             </intent-filter>
         </activity>
 
-        <!-- Dodatkowe aktywności -->
         <activity android:name=".LoginActivity" />
         <activity android:name=".RegisterActivity" />
+        <activity android:name=".HomepageActivity" />
+        <activity android:name=".PlanDetailsActivity" />
 
     </application>
 

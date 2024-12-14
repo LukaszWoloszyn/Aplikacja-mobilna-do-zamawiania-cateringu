@@ -50,7 +50,7 @@ class LoginActivity : AppCompatActivity() {
 
 
     private fun loginUser(login: String, password: String) {
-        val url = "http://10.0.2.2/login.php" // Emulator używa 10.0.2.2 dla localhost
+        val url = "http://10.0.2.2/login.php"
         val queue = Volley.newRequestQueue(this)
 
         val requestBody = JSONObject()
@@ -64,12 +64,11 @@ class LoginActivity : AppCompatActivity() {
                 val message = response.getString("message")
 
                 if (status == "success") {
-                    // Przenieś użytkownika na stronę główną
-                    val intent = Intent(this, MainActivity::class.java)
+                    val intent = Intent(this, HomepageActivity::class.java)
                     startActivity(intent)
                     finish()
                 } else {
-                    // Wyświetl błąd
+
                     Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
                 }
             },
