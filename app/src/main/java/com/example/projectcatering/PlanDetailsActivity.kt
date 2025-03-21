@@ -37,7 +37,7 @@ class PlanDetailsActivity : AppCompatActivity() {
     }
 
     private fun fetchPlanDetails(planId: Int) {
-        val url = "http://10.0.2.2/get_plan_details.php?plan_id=$planId" // Zmień na swój adres serwera
+        val url = "http://10.0.2.2/get_plan_details.php?plan_id=$planId"
 
         val request = JsonArrayRequest(
             Request.Method.GET, url, null,

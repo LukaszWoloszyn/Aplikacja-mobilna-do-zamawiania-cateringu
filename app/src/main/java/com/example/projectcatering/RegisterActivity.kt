@@ -9,8 +9,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.android.volley.Request
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
-import com.example.projectcatering.LoginActivity
-import com.example.projectcatering.MainActivity
 import org.json.JSONObject
 
 class RegisterActivity : AppCompatActivity() {
@@ -43,7 +41,6 @@ class RegisterActivity : AppCompatActivity() {
             val stringRequest = object : StringRequest(
                 Request.Method.POST, url,
                 { response ->
-                    // Obsługa odpowiedzi z serwera
                     val responseObject = JSONObject(response)
                     val status = responseObject.getString("status")
                     val message = responseObject.getString("message")

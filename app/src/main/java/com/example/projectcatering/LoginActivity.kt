@@ -6,19 +6,16 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.android.volley.Request
-import com.android.volley.toolbox.JsonObjectRequest
-import com.android.volley.toolbox.Volley
-import com.example.projectcatering.MainActivity
-import com.example.projectcatering.R
-import com.example.projectcatering.RegisterActivity
-import org.json.JSONObject
-
 
 class LoginActivity : AppCompatActivity() {
+
+    private lateinit var dbHelper: DatabaseHelper
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
+
+        dbHelper = DatabaseHelper(this)
 
         val loginButton: Button = findViewById(R.id.button)
         val loginField: EditText = findViewById(R.id.editTextText)
@@ -29,56 +26,29 @@ class LoginActivity : AppCompatActivity() {
             val password = passwordField.text.toString()
 
             if (login.isNotEmpty() && password.isNotEmpty()) {
-                loginUser(login, password)
+                if (dbHelper.loginUser(login, password)) {
+                    Toast.makeText(this, "Zalogowano pomyślnie!", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, HomepageActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                } else {
+                    Toast.makeText(this, "Błędny login lub hasło", Toast.LENGTH_SHORT).show()
+                }
             } else {
                 Toast.makeText(this, "Uzupełnij wszystkie pola!", Toast.LENGTH_SHORT).show()
             }
         }
 
         val register = findViewById<Button>(R.id.register)
-        register.setOnClickListener{
-            val intentSA = Intent(applicationContext, RegisterActivity::class.java)
-            startActivity(intentSA)
+        register.setOnClickListener {
+            val intent = Intent(applicationContext, RegisterActivity::class.java)
+            startActivity(intent)
         }
 
         val mainPage = findViewById<Button>(R.id.button4)
-        mainPage.setOnClickListener{
-            val intentSA = Intent(applicationContext, MainActivity::class.java)
-            startActivity(intentSA)
+        mainPage.setOnClickListener {
+            val intent = Intent(applicationContext, MainActivity::class.java)
+            startActivity(intent)
         }
     }
-
-
-    private fun loginUser(login: String, password: String) {
-        val url = "http://10.0.2.2/login.php"
-        val queue = Volley.newRequestQueue(this)
-
-        val requestBody = JSONObject()
-        requestBody.put("login", login)
-        requestBody.put("password", password)
-
-        val request = JsonObjectRequest(
-            Request.Method.POST, url, requestBody,
-            { response ->
-                val status = response.getString("status")
-                val message = response.getString("message")
-
-                if (status == "success") {
-                    val intent = Intent(this, HomepageActivity::class.java)
-                    startActivity(intent)
-                    finish()
-                } else {
-
-                    Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
-                }
-            },
-            { error ->
-                Toast.makeText(this, "Błąd serwera: ${error.message}", Toast.LENGTH_SHORT).show()
-            }
-        )
-
-        queue.add(request)
-    }
-
-
 }

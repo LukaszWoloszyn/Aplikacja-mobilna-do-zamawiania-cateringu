@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".RegisterActivity">
 
-    <!-- Główny nagłówek -->
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
@@ -20,7 +19,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp" />
 
-    <!-- LinearLayout z polami tekstowymi -->
     <LinearLayout
         android:id="@+id/inputContainer"
         android:layout_width="0dp"
@@ -85,7 +83,6 @@
             android:hint="Adres dostawy" />
     </LinearLayout>
 
-    <!-- Przycisk "Załóż konto" -->
     <Button
         android:id="@+id/create"
         style="@style/ButtonStyle"
@@ -97,7 +94,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="24dp" />
 
-    <!-- Przycisk "Strona główna" -->
     <Button
         android:id="@+id/mainPage"
         style="@style/ButtonStyleSecondary"

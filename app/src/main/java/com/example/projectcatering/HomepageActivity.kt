@@ -2,9 +2,7 @@ package com.example.projectcatering
 
 import android.os.Bundle
 import android.util.Log
-import android.view.MenuItem
 import android.view.View
-import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.PopupMenu
@@ -12,7 +10,6 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.toolbox.JsonArrayRequest
 import com.android.volley.toolbox.Volley
-import com.example.projectcatering.R
 import com.android.volley.Request
 import com.android.volley.Response
 import org.json.JSONArray
@@ -33,22 +30,22 @@ class HomepageActivity : AppCompatActivity() {
         }
 
         recyclerView = findViewById(R.id.plan_recycler_view)
-        recyclerView.layoutManager = GridLayoutManager(this, 2) // 2 kolumny
+        recyclerView.layoutManager = GridLayoutManager(this, 2)
         planAdapter = PlanAdapter(plans, this)
         recyclerView.adapter = planAdapter
 
-        fetchPlansFromDatabase() // Pobranie planów z bazy
+        fetchPlansFromDatabase()
     }
 
     private fun fetchPlansFromDatabase() {
-        val url = "http://10.0.2.2/get_plans.php" // URL do endpointu backendowego
+        val url = "http://10.0.2.2/get_plans.php"
         val requestQueue = Volley.newRequestQueue(this)
 
         val jsonArrayRequest = JsonArrayRequest(
             Request.Method.GET, url, null,
             Response.Listener { response ->
-                Log.d("HomepageActivity", "Otrzymana odpowiedź: $response") // Dodano logi
-                parsePlans(response) // Wywołanie parsowania
+                Log.d("HomepageActivity", "Otrzymana odpowiedź: $response")
+                parsePlans(response)
             },
             Response.ErrorListener { error ->
                 Toast.makeText(this, "Błąd sieci: ${error.message}", Toast.LENGTH_SHORT).show()
@@ -65,7 +62,7 @@ class HomepageActivity : AppCompatActivity() {
             val planJson = response.getJSONObject(i)
 
             // Pobieram nazwę obrazu z pola "image"
-            val imageName = planJson.optString("image", "") // Zmiana klucza na "image"
+            val imageName = planJson.optString("image", "")
             Log.d("ImageDebug", "Pobrano nazwę obrazu: $imageName")
 
             val imageResId = if (imageName.isNotEmpty()) {

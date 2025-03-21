@@ -12,7 +12,6 @@
         android:theme="@style/Theme.projectcatering"
         >
 
-        <!-- Główna aktywność -->
         <activity
             android:name=".MainActivity"
             android:exported="true">

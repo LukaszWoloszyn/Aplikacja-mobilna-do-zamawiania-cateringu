@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Toolbar with Navigation -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="0dp"
@@ -18,9 +17,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- Title -->
-
-        <!-- Icon -->
         <ImageView
             android:id="@+id/icon_user"
             android:layout_width="48dp"
@@ -62,7 +58,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintVertical_bias="0.1" />
 
-    <!-- Grid of Plans -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/plan_recycler_view"
         android:layout_width="0dp"

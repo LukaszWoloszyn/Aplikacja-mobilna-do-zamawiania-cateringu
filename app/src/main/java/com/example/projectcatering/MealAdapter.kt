@@ -28,7 +28,6 @@ class MealAdapter(private var meals: List<Meal>) : RecyclerView.Adapter<MealAdap
 
     override fun getItemCount(): Int = meals.size
 
-    // Metoda do aktualizacji danych w adapterze
     fun updateData(newMeals: List<Meal>) {
         meals = newMeals
         notifyDataSetChanged()
